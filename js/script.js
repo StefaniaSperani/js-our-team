@@ -7,7 +7,7 @@ x Creare l’array di oggetti con le informazioni fornite.
 MILESTONE 1:
 x Stampare su console le informazioni di nome, ruolo e la stringa della foto
 MILESTONE 2:
-Stampare le stesse informazioni su DOM sottoforma di stringhe
+x Stampare le stesse informazioni su DOM sottoforma di stringhe
 BONUS 1:
 Trasformare la stringa foto in una immagine effettiva
 BONUS 2:
@@ -62,5 +62,6 @@ for(let person of team){
     card.append(person.nome);
     card.append(person.role);
     card.append(person.image);
+
     teamHtml.append(card);
 }
