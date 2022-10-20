@@ -69,14 +69,14 @@ for(let person of team){
 //ora devo creare la funzione che crei la card in maniera dinamica
 function generaCard(oggetto){
     // console.log('sono card');
-    const row = document.createElement('div');
+    const row = document.getElementById('row');
     //devo inserire più classi al div, quindi creo un array con le classi
     const rowClass = ['row', 'g-5'];
     //per inserire tutte le classi che ho scritto nell'array aggiungo '...'
     row.classList.add(...rowClass);
     //creo anche la col
     const col = document.createElement('div');
-    const colClass = ['col-4', 'text-center' ];
+    const colClass = ['col-4', 'text-center',];
     col.classList.add(...colClass);
     //creo la card
     const card = document.createElement('div');

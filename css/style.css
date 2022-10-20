@@ -6,20 +6,15 @@
 
 body{
     background-color: gray;
+    font-family: 'Montserrat', sans-serif;
 }
-/* #our-team{
-
-
-} */
-/* #our-team img{
-    width: 200px;
-
-} */
-/* #our-team .row{
-    padding-right: 0;
-    padding-left: 0;
-} */
-/* .mycard{
-    border: 1px solid white;
-    background-color: rgb(4, 164, 238);
-} */
+.style-css{
+    text-shadow: 2px 2px 8px #e4e0e0;
+}
+#our-team .card{
+    box-shadow: 5px 10px 8px 10px #d3d3d3;
+    cursor: not-allowed;
+}
+#our-team .card:hover{
+    opacity: 0.7;
+}
