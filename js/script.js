@@ -54,14 +54,37 @@ const team = [
 console.log(team);
 
 //ora devo stamparlo sul DOM, quindi estraggo il div nell'html
-const teamHtml = document.getElementById('our-team');
-console.log(teamHtml)
+const ourTeam = document.getElementById('our-team');
+
 for(let person of team){
-    const card = document.createElement('div');
 
-    // card.append(person.nome);
-    // card.append(person.role);
-    // card.append(person.image);
-
-    // teamHtml.append(card);
 }
+
+//ora devo creare la funzione che crei la card in maniera dinamica
+function generaCard(){
+    // console.log('sono card');
+    const row = document.createElement('div');
+    //devo inserire più classi al div, quindi creo un array con le classi
+    const rowClass = ['row', 'g-5'];
+    //per inserire tutte le classi che ho scritto nell'array aggiungo '...'
+    row.classList.add(...rowClass);
+    //creo anche la col
+    const col = document.createElement('div');
+    const colClass = ['col-4', 'text-center' ];
+    col.classList.add(...colClass);
+    //creo la card
+    const card = document.createElement('div');
+    card.classList.add('card');
+    //creo l'immagine
+    const img = document.createElement('img');
+    card.classList.add('card-img-top');
+    //creo un h5 per il nome
+    const h5 = document.createElement('h5');
+    h5.classList.add('card-title');
+    //creo un p per la mansione
+    const p = document.createElement('p');
+    p.classList.add('card-text');
+
+
+}
+generaCard()
