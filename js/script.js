@@ -55,13 +55,19 @@ console.log(team);
 
 //ora devo stamparlo sul DOM, quindi estraggo il div nell'html
 const ourTeam = document.getElementById('our-team');
-
+//creo un ciclo for of per prendere l'oggetto dall'array
 for(let person of team){
-
+    console.log(person)
+    //e uso il ciclo for in per farlo ciclare dentro l'oggetto
+    for(let key in person) {
+        console.log(person[key]);
+    }
+    //e attacco la funzione che stamperà tutto nella card
+    generaCard(person);
 }
 
 //ora devo creare la funzione che crei la card in maniera dinamica
-function generaCard(){
+function generaCard(oggetto){
     // console.log('sono card');
     const row = document.createElement('div');
     //devo inserire più classi al div, quindi creo un array con le classi
@@ -78,13 +84,24 @@ function generaCard(){
     //creo l'immagine
     const img = document.createElement('img');
     card.classList.add('card-img-top');
+    img.src = './img/' + oggetto.image;
+    //creo il body del testo
+    const cardBody = document.createElement('div');
+    cardBody.classList.add('card-body')
     //creo un h5 per il nome
     const h5 = document.createElement('h5');
     h5.classList.add('card-title');
+    h5.innerHTML = oggetto.nome;
     //creo un p per la mansione
     const p = document.createElement('p');
     p.classList.add('card-text');
-
-
+    p.innerHTML = oggetto.role;
+    //li appendo nel DOM
+    cardBody.appendChild(h5)
+    cardBody.appendChild(p);
+    card.appendChild(cardBody)
+    card.appendChild(img);
+    col.appendChild(card);
+    row.appendChild(col);
+    ourTeam.appendChild(row);
 }
-generaCard()
