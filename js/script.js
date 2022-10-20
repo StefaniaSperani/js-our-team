@@ -59,9 +59,9 @@ console.log(teamHtml)
 for(let person of team){
     const card = document.createElement('div');
 
-    card.append(person.nome);
-    card.append(person.role);
-    card.append(person.image);
+    // card.append(person.nome);
+    // card.append(person.role);
+    // card.append(person.image);
 
-    teamHtml.append(card);
+    // teamHtml.append(card);
 }
