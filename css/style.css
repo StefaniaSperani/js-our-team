@@ -7,3 +7,10 @@
 body{
     background-color: gray;
 }
+#wrapper{
+    padding: 0px, 200px;
+}
+#our-team{
+    border: 1px solid black;
+
+}
